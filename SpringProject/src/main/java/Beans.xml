@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- ******** By Reference ******** 
+	<bean id="earth" class="com.autowire.Planet"> 
+		<property name="Name" value="earth" /> 
+		<property name="gt" ref="gt" /> 
+		
+		</bean> 
+		
+		
+		<bean id="gt" class="com.autowire.Gravity"> 
+		<property name="gt" value="123"/>
+		 </bean> -->
+
+	<!-- ************************ -->
+
+	<!-- ******** By Reference ******** 
+	
+	<bean id="earth" class="com.autowire.Planet" autowire="byName"> 
+	<property name="Name" value="earth" />
+	 </bean> 
+	 <bean id="gt" class="com.autowire.Gravity">
+	  <property name="gt" value="123" /> 
+	  </bean> -->
+
+	<bean id="Earth" class="com.autowire.Planet" autowire="byType">
+		<property name="Name" value="EARTH" />
+	</bean>
+
+	<bean id="gt" class="com.autowire.Gravity">
+		<property name="gt" value="123" />
+
+	</bean>
+
+</beans>
